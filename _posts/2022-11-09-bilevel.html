@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Bilevel Learning of L1 Regularizers with Closed-form Gradients (BLoRC)"
+subtitle: "By Avrajit Ghosh (Previosuly worked on by Mike McCann)"
+date: 2022-11-09 23:45:13 -0400
+background: '/img/posts/BILEVELBANNER.png'
+---
+<h3 class="section-heading">Abstract</h3>
+
+<p>We present a method for supervised learning of sparsity-promoting regularizers, which are a key ingredient in many modern signal reconstruction approaches. The parameters of the regularizer are learned to minimize the mean squared error of reconstruction on a training set of ground truth signal and measurement pairs. Training involves solving a challenging bilevel optimization problem with a nonsmooth lower-level objective.</p>
+
+<p>We derive an expression for the gradient of the training loss using the implicit closed-form solution of the lower-level variational problem given by its dual problem, and provide an accompanying gradient descent algorithm (dubbed BLORC) to minimize the loss. Our experiments on simple natural images and for denoising 1D signals show that the proposed method can learn meaningful operators and the analytical gradients are calculated faster than standard automatic differentiation methods. While the approach we present is applied to denoising, we believe that it could be adapted to a wide variety of inverse problems with linear measurement models, thus giving it applicability in a wide range of scenarios.</p>
+
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1g9_wGg9XOZFE8SoxpUMVsoEENiXXMvBf" alt="Demo Image">
+
+<h3 class="section-heading">References</h3>
+
+<p>A. Ghosh, M. T. Mccann and S. Ravishankar, "<a href="https://ieeexplore.ieee.org/abstract/document/9747201" target ="blank">Bilevel Learning of ℓ1 Regularizers with Closed-Form Gradients (BLORC)</a>," ICASSP 2022 - 2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Singapore, Singapore, 2022, pp. 1491-1495, doi: 10.1109/ICASSP43922.2022.9747201</p>
+<p>A Ghosh, MT McCann, M Mitchell, S Ravishankar, "<a href="https://arxiv.org/abs/2207.08939" target ="blank">Learning Sparsity-Promoting Regularizers using Bilevel Optimization</a>," arXiv preprint arXiv:2207.08939, 2022 (to appear in SIAM journal Imaging Sciences)</p>
+

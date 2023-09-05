@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Machine learning for Classifying Events in Nuclear Astrophysics"
+subtitle: "By Tyler Wheeler"
+date: 2022-11-05 23:45:13 -0400
+background: '/img/posts/NINTHBANNER.png'
+---
+
+<h3 class="section-heading">Abstract</h3>
+
+<p>Measuring astrophysically relevant nuclear reaction rates can provide crucial insight into astrophysical phenomena, such as inferring neutron star properties. To measure these reaction rates we use Time Projection Chambers (TPCs). TPCs are particle detectors that perform 3D track reconstructions of particle trajectories. Recently, machine learning algorithms for image classification have emerged as valuable tools for classifying particles from their TPC track reconstructions. This is typically achieved by feeding a 2D projection of the 3D track into a 2D convolutional neural network (ConvNet). However, situations can arise where distinguishing certain particle types requires the entire 3D topology of an event. This would ordinarily require a 3D ConvNet, which is very computationally expensive, and thus not feasible given the amount of data regularly produced from a TPC. We have devised an alternate method for particle identification in these instances. By exploiting the different data modalities captured by the TPC, one can condense all of the relevant data from a 3D track into a 2D image with distinct features for a 2D ConvNet. Additionally, researchers have found that using simulated data to fine-tune an existing 2D ConvNet can allow one to identify real TPC tracks. We have discovered that by applying the methods of robustification on such fine-tuned models classification results can be greatly improved. </p>
+
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1-EuaFgKGdqaah0JwxQvMFcD9Y44sjNKq" alt="Demo Image">
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1p8tD-kum1a1me_o11NF7pahsZBXa34cJ" alt="Demo Image">

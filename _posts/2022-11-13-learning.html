@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Learning Data Undersampling Patterns in MRI"
+subtitle: "By Siddhant Gautam, Angqi Li, and Evan Bell (Previously worked on by Leo Huang)"
+date: 2022-11-13 23:45:13 -0400
+background: '/img/posts/FIRSTBANNER.png'
+---
+
+<h3 class="section-heading">Abstract</h3>
+
+<p>Magnetic resonance imaging (MRI) is essential for the detection and diagnosis of diseases. MRI scanners sequentially collect measurements in the frequency domain (or k-space), from which an image is reconstructed. A central challenge in MRI is its time-consuming sequential acquisition process as the scanner needs to densely sample the underlying k-space for accurate reconstruction. In order to improve patients’ comfort & safety and alleviate motion artifacts, reconstructing high-quality images from limited measurements is desirable. There are two core parts in the accelerated MRI pipeline: a sampling pattern deployed to collect the undersampled data in k-space and a corresponding reconstruction method (reconstructor) that also enables recovering any missing information. In this work, we use machine-learned models to predict the undersampling pattern and perform image reconstruction in a single pass and in an object-adaptive manner.</p>
+
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1wniuF0JKBM0IfsKWBU8QFYY9TPvAz0be" alt="Demo Image">
+
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=12xQlwXOFdjxvzK3w0NGMDAjLBLYjkG15" alt="Demo Image">
+
+<h3 class="section-heading">References</h3>
+
+<p>Z. Huang and S. Ravishankar, "<a href="https://ieeexplore.ieee.org/document/9757874" target="_blank">Single-Pass Object-Adaptive Data Undersampling and Reconstruction for MRI</a>," in IEEE Transactions on Computational Imaging, vol. 8, pp. 333-345, 2022, doi: 10.1109/TCI.2022.3167454</p>

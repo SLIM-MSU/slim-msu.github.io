@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Scatter Correction and Density Recontruction in Tomography"
+subtitle: "By Siddhant Gautam, Shijun Liang, and Madeline Mitchell (Previously worked on by Mike McCann and Alex Sietsema)"
+date: 2022-11-12 23:45:13 -0400
+background: '/img/posts/SECONDBANNER.png'
+---
+
+<h3 class="section-heading">Abstract</h3>
+
+<p>In many scientific applications arising in material science, shock physics, inertial confinement fusion, and in nuclear security applications, such as stockpile stewardship, a sequence of radiographic images are acquired and used in an attempt to elucidate the physics models and their associated parameters. Object density reconstruction from these projections containing scattered radiation and noise is of critical importance in many applications. However, density reconstructions performed using forward modeling approaches from experimental radiographic data of dynamic tests are complicated by the noisy and complex multiscale & multiphysics environment. In other words, scatter limits the ability to perform accurate reconstructions. 
+
+<p>Incorporating machine-learning models could prove beneficial for accurate density reconstruction, particularly in dynamic imaging, where the time evolution of the density fields could be captured by partial differential equations (PDE) or by learning from hydrodynamics simulations. Moreover, a Generative Adversarial Network (GAN) can be learned using a 3D-UNet in order to denoise the corrupted densities in accordance with known physics principlesIn this project, we demonstrate the ability of learned deep neural networks to perform artifact removal in noisy density reconstructions, where the noise is imperfectly characterized. This method outperforms the baseline and densities descattered by this framework closely match the ground truth over time. </p>
+
+<p>All in all, we train the networks from large-density time-series datasets, with noise simulated according to parametric random distributions that may mimic noise in experiments.</p>
+
+<div align=center><img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1kxjhQTuhqX5lMdqGmMuNm1qV9KsDpNMA" alt="Demo Image"></div>
+
+<h3 class="section-heading">References</h3>
+
+<p>Zhishen Huang, Marc Klasky, Trevor Wilcox, and Saiprasad Ravishankar, "<a href="https://doi.org/10.1364/AO.446188" target="_blank">Physics-driven learning of Wasserstein GAN for density reconstruction in dynamic tomography</a>," Appl. Opt. 61, 2805-2817 (2022)</p>
+<p>Michael T. McCann, Marc L. Klasky, Jennifer L. Schei, and Saiprasad Ravishankar, "<a href="https://doi.org/10.1364/OE.433993" target="_blank">Local models for scatter estimation and descattering in polyenergetic X-ray tomography</a>," Opt. Express 29, 29423-29438 (2021)</p>
+<p>Alexander N. Sietsema, Michael T. McCann, Marc L. Klasky, Saiprasad Ravishankar, "<a href="https://doi.org/10.1117/12.2647151" target="_blank">Comparing one-step and two-step scatter correction and density reconstruction in x-ray CT</a>," Proc. SPIE 12304, 7th International Conference on Image Formation in X-Ray Computed Tomography, 123042E (17 October 2022)</p>

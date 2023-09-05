@@ -1,0 +1,46 @@
+---
+layout: post
+title: "Deep Learning Inspired by or Combined with Transform Learning for Low-dose Reconstruction"
+subtitle: "Previously worked on by Leo Huang and Mike McCann"
+date: 2022-11-06 23:45:13 -0400
+background: '/img/posts/EIGHTHBANNER.png'
+---
+
+<h3 class="section-heading">Abstract</h3>
+
+<p>Traditional model-based image reconstruction
+    (MBIR) methods combine forward and noise models with simple
+    object priors. In this
+        work, we propose a hybrid supervised-unsupervised (SUPER) learning
+        framework for X-ray computed tomography (CT) image
+        reconstruction. The proposed learning formulation leverages
+        both sparsity or unsupervised learning-based priors and neural
+        network reconstructors to simulate a fixed-point iteration
+        process. Each proposed trained block consists of a deterministic
+        MBIR solver and a neural network. The information flows in
+        parallel through these two reconstructors and is then optimally
+        combined, and multiple such blocks are cascaded to form a
+        reconstruction pipeline. </p>
+
+        <img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1YB1XW_jTicSI2-iSdpD61rn9luhtHap1" alt="Demo Image">
+        <span class="caption text-muted">Fig. 1: Overall structure of the proposed Parallel SUPER framework.</span>
+
+        <p>We demonstrate the efficacy of this
+        learned hybrid model for low-dose CT image reconstruction
+        with limited training data, where we use the NIH AAPM Mayo
+        Clinic Low Dose CT Grand Challenge dataset for training and
+        testing. In our experiments, we study combinations of supervised
+        deep network reconstructors and sparse representations-based
+        (unsupervised) learned or analytical priors. Our results
+        demonstrate the promising performance of the proposed
+        framework compared to recent reconstruction methods.</p>
+
+<h3 class="Results">Results</h3>
+
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1opimB8zTz1R5uDGBgWfkQz-CTEKgPolN" alt="Demo Image">
+<span class="caption text-muted">Fig. 2: Reconstruction of slice 50 from patient L067 and reconstruction of slice 150 from patient L310 using various methods. The display window is [800, 1200] HU.</span>
+
+<h3 class="section-heading">References</h3>
+
+<p>Chen, Ling, Zhishen Huang, Yong Long, and Saiprasad Ravishankar. <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12304/123041S/Combining-deep-learning-and-adaptive-sparse-modeling-for-low-dose/10.1117/12.2647190.full" target ="blank"> "Combining deep learning and adaptive sparse modeling for low-dose CT reconstruction."</a> In 7th International Conference on Image Formation in X-Ray Computed Tomography, vol. 12304, pp. 390-395. SPIE, 2022.</p>
+<p>Ye, Siqi, Zhipeng Li, Michael T. McCann, Yong Long, and Saiprasad Ravishankar. <a href="https://ieeexplore.ieee.org/abstract/document/9476023?casa_token=SnMdhG9_PW8AAAAA:jTTmnwk2xOT7xTc7Uzd07_mjgoUb-pvQWQPpGWKNHZp0AVkO3Q5eM4G9cX8fG2YuCG_hfCNd3A" target ="blank">"Unified supervised-unsupervised (super) learning for x-ray ct image reconstruction."</a> IEEE Transactions on Medical Imaging 40, no. 11 (2021): 2986-3001.</p>

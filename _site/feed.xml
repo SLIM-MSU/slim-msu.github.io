@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-05T16:20:44-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SLIM</title><subtitle>Signals, Learning and Imaging Research Group</subtitle><author><name>SLIM</name></author><entry><title type="html">Learning Data Undersampling Patterns in MRI</title><link href="http://localhost:4000/2022/11/13/learning.html" rel="alternate" type="text/html" title="Learning Data Undersampling Patterns in MRI" /><published>2022-11-13T22:45:13-05:00</published><updated>2022-11-13T22:45:13-05:00</updated><id>http://localhost:4000/2022/11/13/learning</id><content type="html" xml:base="http://localhost:4000/2022/11/13/learning.html"><![CDATA[<h3 class="section-heading">Abstract</h3>
+
+<p>Magnetic resonance imaging (MRI) is essential for the detection and diagnosis of diseases. MRI scanners sequentially collect measurements in the frequency domain (or k-space), from which an image is reconstructed. A central challenge in MRI is its time-consuming sequential acquisition process as the scanner needs to densely sample the underlying k-space for accurate reconstruction. In order to improve patients’ comfort & safety and alleviate motion artifacts, reconstructing high-quality images from limited measurements is desirable. There are two core parts in the accelerated MRI pipeline: a sampling pattern deployed to collect the undersampled data in k-space and a corresponding reconstruction method (reconstructor) that also enables recovering any missing information. In this work, we use machine-learned models to predict the undersampling pattern and perform image reconstruction in a single pass and in an object-adaptive manner.</p>
+
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1wniuF0JKBM0IfsKWBU8QFYY9TPvAz0be" alt="Demo Image">
+
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=12xQlwXOFdjxvzK3w0NGMDAjLBLYjkG15" alt="Demo Image">
+
+<h3 class="section-heading">References</h3>
+
+<p>Z. Huang and S. Ravishankar, "<a href="https://ieeexplore.ieee.org/document/9757874" target="_blank">Single-Pass Object-Adaptive Data Undersampling and Reconstruction for MRI</a>," in IEEE Transactions on Computational Imaging, vol. 8, pp. 333-345, 2022, doi: 10.1109/TCI.2022.3167454</p>]]></content><author><name>SLIM</name></author><summary type="html"><![CDATA[Abstract]]></summary></entry><entry><title type="html">Scatter Correction and Density Recontruction in Tomography</title><link href="http://localhost:4000/2022/11/12/scatter.html" rel="alternate" type="text/html" title="Scatter Correction and Density Recontruction in Tomography" /><published>2022-11-12T22:45:13-05:00</published><updated>2022-11-12T22:45:13-05:00</updated><id>http://localhost:4000/2022/11/12/scatter</id><content type="html" xml:base="http://localhost:4000/2022/11/12/scatter.html"><![CDATA[<h3 class="section-heading">Abstract</h3>
+
+<p>In many scientific applications arising in material science, shock physics, inertial confinement fusion, and in nuclear security applications, such as stockpile stewardship, a sequence of radiographic images are acquired and used in an attempt to elucidate the physics models and their associated parameters. Object density reconstruction from these projections containing scattered radiation and noise is of critical importance in many applications. However, density reconstructions performed using forward modeling approaches from experimental radiographic data of dynamic tests are complicated by the noisy and complex multiscale & multiphysics environment. In other words, scatter limits the ability to perform accurate reconstructions. 
+
+<p>Incorporating machine-learning models could prove beneficial for accurate density reconstruction, particularly in dynamic imaging, where the time evolution of the density fields could be captured by partial differential equations (PDE) or by learning from hydrodynamics simulations. Moreover, a Generative Adversarial Network (GAN) can be learned using a 3D-UNet in order to denoise the corrupted densities in accordance with known physics principlesIn this project, we demonstrate the ability of learned deep neural networks to perform artifact removal in noisy density reconstructions, where the noise is imperfectly characterized. This method outperforms the baseline and densities descattered by this framework closely match the ground truth over time. </p>
+
+<p>All in all, we train the networks from large-density time-series datasets, with noise simulated according to parametric random distributions that may mimic noise in experiments.</p>
+
+<div align=center><img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1kxjhQTuhqX5lMdqGmMuNm1qV9KsDpNMA" alt="Demo Image"></div>
+
+<h3 class="section-heading">References</h3>
+
+<p>Zhishen Huang, Marc Klasky, Trevor Wilcox, and Saiprasad Ravishankar, "<a href="https://doi.org/10.1364/AO.446188" target="_blank">Physics-driven learning of Wasserstein GAN for density reconstruction in dynamic tomography</a>," Appl. Opt. 61, 2805-2817 (2022)</p>
+<p>Michael T. McCann, Marc L. Klasky, Jennifer L. Schei, and Saiprasad Ravishankar, "<a href="https://doi.org/10.1364/OE.433993" target="_blank">Local models for scatter estimation and descattering in polyenergetic X-ray tomography</a>," Opt. Express 29, 29423-29438 (2021)</p>
+<p>Alexander N. Sietsema, Michael T. McCann, Marc L. Klasky, Saiprasad Ravishankar, "<a href="https://doi.org/10.1117/12.2647151" target="_blank">Comparing one-step and two-step scatter correction and density reconstruction in x-ray CT</a>," Proc. SPIE 12304, 7th International Conference on Image Formation in X-Ray Computed Tomography, 123042E (17 October 2022)</p>]]></content><author><name>SLIM</name></author><summary type="html"><![CDATA[Abstract]]></summary></entry><entry><title type="html">Sparse-view CT Reconstruction</title><link href="http://localhost:4000/2022/11/11/sparse.html" rel="alternate" type="text/html" title="Sparse-view CT Reconstruction" /><published>2022-11-11T22:45:13-05:00</published><updated>2022-11-11T22:45:13-05:00</updated><id>http://localhost:4000/2022/11/11/sparse</id><content type="html" xml:base="http://localhost:4000/2022/11/11/sparse.html"><![CDATA[<h2><div align=center>Sparse-view Cone Beam CT Reconstruction using Data-consistent Supervised and Adversarial Learning from Scarce Training Data </div></h2>
+
+<h3 class="section-heading">Abstract</h3>
+
+<p>Reconstruction of CT images from a limited set of projections through an object is important in several applications ranging from medical imaging to industrial settings.
+As the number of available projections decreases, traditional reconstruction techniques such as the Feldkamp, Davis, and Kress (FDK) algorithm and model based iterative reconstruction methods perform poorly. </p>
+    
+<img class="img-fluid" src="https://lh3.googleusercontent.com/NzlI01TvHFdsurkpnH4Eu6NXv7zPpyEL7LdsTS_SD-dQ7NVxgQVBul7fh9HNJVrhUmtD5QqTNOM1wr-efr6cwSNPjgBKPfzdT2zdtRca4YXvI3VeKeB6v8TGPqLoxE9YMbAL7mOYJl0F1HEOa_47C6jfLGfpH-jZf-QRDO8fGfTPVgPMWgo2iUGxhi9axQ" alt="Demo Image">
+<span class="caption text-muted">Fig. 1: Flow diagram depicting the overall pipeline of our algorithm, where x<sub>FDK</sub> is the FDK reconstruction, x<sub>EP</sub> is an edge-preserving regularized reconstruction, x<sub>G</sub> is the generator’s output after slice aggregation, and x<sub>1</sub> is the output of the first stage.</span>
+    
+<p>This work focuses on image reconstruction in such settings, namely, when both the number of available CT projections and the training data is extremely
+limited. We adopt a sequential reconstruction approach over several stages using an adversarially trained shallow network for "destreaking" followed by a data-consistency update in each
+stage. We use image subvolumes to train our method and patch aggregation and a hybrid 3D-to-2D mapping network for the "destreaking" component. Comparisons
+to other methods over several test examples indicate that the proposed method has much potential when both the number of projections and available training data are highly limited.</p>    
+
+<h3 class="section-heading">Results</h3>
+<br>
+<img class="img-fluid" src="https://lh4.googleusercontent.com/0f8zOuR-E9XDq-qfDCfypLenVd1OnvMXrZC48w7a589X5EpPovoxsa5boRqgEy7_0B1vxVFANjPM06VLyqLt516jp-g85bXZZcW-dCea4E6CgQNOS7dgOUF4jF_tLA7NwMnXiqqikf8__26foCX1GqBAHpgRDMYkWe52_fR-Q3JdrtRzHTErkDaP9Orjjg" alt="Demo Image">
+<span class="caption text-muted">Fig. 2: Comparison of the quality of reconstruction of our proposed algorithm (h) for walnut 2 (8 views) in Table I to various reference methods. Each
+subfigure depicts slices through the center of the walnut volume in three different directions (or sagittal, coronal and transverse orientations). The normalized
+mean absolute errors have also been shown underneath each subfigure. The central slices corresponding to the ground truth training walnut volume have also been shown in (b).</span>
+
+<h3 class="section-heading">References</h3>
+<p>Lahiri, Anish, Gabriel Maliakal, Marc L. Klasky, Jeffrey A. Fessler, and Saiprasad Ravishankar. <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10008080" target="_blank">"Sparse-view cone beam CT reconstruction using data-consistent supervised and adversarial learning from scarce training data."</a> IEEE Transactions on Computational Imaging 9 (2023): 13-28. </p>]]></content><author><name>SLIM</name></author><summary type="html"><![CDATA[Sparse-view Cone Beam CT Reconstruction using Data-consistent Supervised and Adversarial Learning from Scarce Training Data]]></summary></entry><entry><title type="html">Machine Learning for MRI Reconstruction from Limited Data</title><link href="http://localhost:4000/2022/11/10/machine.html" rel="alternate" type="text/html" title="Machine Learning for MRI Reconstruction from Limited Data" /><published>2022-11-10T22:45:13-05:00</published><updated>2022-11-10T22:45:13-05:00</updated><id>http://localhost:4000/2022/11/10/machine</id><content type="html" xml:base="http://localhost:4000/2022/11/10/machine.html"><![CDATA[<h2><div align=center>Optimized Parallel Combination of Deep Networks and Sparsity Regularization for MR Image Reconstruction (OPCoNS)</div></h2>
+
+<h3 class="section-heading">Abstract</h3>
+
+<p>This work examines optimized parallel combinations of deep networks and conventional regularized reconstruction for improved quality of MR image reconstructions from undersampled k-space data. Features learned by deep networks and typical model-based iterative algorithms (e.g., sparsity-penalized reconstruction) could complement each other for effective reconstructions. We observe that combining the image features from multiple approaches in a parallel fashion with appropriate learned weights leads to more effective image representations that are not captured by either strictly supervised or (unsupervised) conventional iterative methods. </p>
+    
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1Fpl-W9DIpfuxftp0thGGfFYtRRNLzOsJ" alt="Demo Image">
+
+<h3 class="section-heading">References</h3>
+
+<p>Ghosh, Avrajit, Shijun Liang, Anish Lahiri, and Saiprasad Ravishankar. "<a href="https://archive.ismrm.org/2022/3487.html" target ="blank">Optimized Parallel Combination of Deep Networks and Sparsity Regularization for MR Image Reconstruction (OPCoNS)</a>."</p>]]></content><author><name>SLIM</name></author><summary type="html"><![CDATA[Optimized Parallel Combination of Deep Networks and Sparsity Regularization for MR Image Reconstruction (OPCoNS)]]></summary></entry><entry><title type="html">Bilevel Learning of L1 Regularizers with Closed-form Gradients (BLoRC)</title><link href="http://localhost:4000/2022/11/09/bilevel.html" rel="alternate" type="text/html" title="Bilevel Learning of L1 Regularizers with Closed-form Gradients (BLoRC)" /><published>2022-11-09T22:45:13-05:00</published><updated>2022-11-09T22:45:13-05:00</updated><id>http://localhost:4000/2022/11/09/bilevel</id><content type="html" xml:base="http://localhost:4000/2022/11/09/bilevel.html"><![CDATA[<h3 class="section-heading">Abstract</h3>
+
+<p>We present a method for supervised learning of sparsity-promoting regularizers, which are a key ingredient in many modern signal reconstruction approaches. The parameters of the regularizer are learned to minimize the mean squared error of reconstruction on a training set of ground truth signal and measurement pairs. Training involves solving a challenging bilevel optimization problem with a nonsmooth lower-level objective.</p>
+
+<p>We derive an expression for the gradient of the training loss using the implicit closed-form solution of the lower-level variational problem given by its dual problem, and provide an accompanying gradient descent algorithm (dubbed BLORC) to minimize the loss. Our experiments on simple natural images and for denoising 1D signals show that the proposed method can learn meaningful operators and the analytical gradients are calculated faster than standard automatic differentiation methods. While the approach we present is applied to denoising, we believe that it could be adapted to a wide variety of inverse problems with linear measurement models, thus giving it applicability in a wide range of scenarios.</p>
+
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1g9_wGg9XOZFE8SoxpUMVsoEENiXXMvBf" alt="Demo Image">
+
+<h3 class="section-heading">References</h3>
+
+<p>A. Ghosh, M. T. Mccann and S. Ravishankar, "<a href="https://ieeexplore.ieee.org/abstract/document/9747201" target ="blank">Bilevel Learning of ℓ1 Regularizers with Closed-Form Gradients (BLORC)</a>," ICASSP 2022 - 2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Singapore, Singapore, 2022, pp. 1491-1495, doi: 10.1109/ICASSP43922.2022.9747201</p>
+<p>A Ghosh, MT McCann, M Mitchell, S Ravishankar, "<a href="https://arxiv.org/abs/2207.08939" target ="blank">Learning Sparsity-Promoting Regularizers using Bilevel Optimization</a>," arXiv preprint arXiv:2207.08939, 2022 (to appear in SIAM journal Imaging Sciences)</p>]]></content><author><name>SLIM</name></author><summary type="html"><![CDATA[Abstract]]></summary></entry><entry><title type="html">Unsupervised Deep Learning Methods and Theory</title><link href="http://localhost:4000/2022/11/09/unsupervised.html" rel="alternate" type="text/html" title="Unsupervised Deep Learning Methods and Theory" /><published>2022-11-09T22:45:13-05:00</published><updated>2022-11-09T22:45:13-05:00</updated><id>http://localhost:4000/2022/11/09/unsupervised</id><content type="html" xml:base="http://localhost:4000/2022/11/09/unsupervised.html"><![CDATA[<h3 class="section-heading">Abstract</h3>
+
+<p>In this work, we study the deep image prior (DIP) for reconstruction problems in magnetic resonance imaging (MRI). DIP has become a popular approach for image reconstruction, where it recovers the clear image by fitting an overparameterized convolutional neural network (CNN) to the corrupted/undersampled measurements.  
+    To improve the performance of DIP, recent work shows that using a reference image as an input often leads to improved reconstruction results compared to vanilla DIP with random input. However, obtaining the reference input image often requires supervision and hence is difficult in practice. In this work, we propose a self-guided reconstruction scheme that uses no training data other than the set of undersampled measurements to simultaneously estimate the network weights and input (reference). We introduce a new regularization that aids the joint estimation by requiring the CNN to act as a powerful denoiser. The proposed self-guided method gives significantly improved image reconstructions for MRI with limited measurements compared to the conventional DIP and the reference-guided method, while eliminating the need for any additional data.
+    </p>
+
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1pMHNZm4JORWhKGZD4702LeOceMnwvAfg" alt="Demo Image">]]></content><author><name>SLIM</name></author><summary type="html"><![CDATA[Abstract]]></summary></entry><entry><title type="html">Reinforcement Learning for Adaptive Imaging</title><link href="http://localhost:4000/2022/11/08/reinforcement.html" rel="alternate" type="text/html" title="Reinforcement Learning for Adaptive Imaging" /><published>2022-11-08T22:45:13-05:00</published><updated>2022-11-08T22:45:13-05:00</updated><id>http://localhost:4000/2022/11/08/reinforcement</id><content type="html" xml:base="http://localhost:4000/2022/11/08/reinforcement.html"><![CDATA[<h3 class="section-heading">Abstract</h3>
+
+<p>Compressed sensing (CS) has been popular in magnetic resonance
+    imaging (MRI) and accelerates the measurement acquisition process
+    by undersampling data in k-space, while exploiting sparsity and incoherence
+    to achieve accurate reconstructions. Deep learning methods
+    have recently demonstrated superior performance for MRI reconstruction
+    from undersampled data. However, most of the methods
+    rely on complex models to achieve promising results via deterministic
+    optimization. Alternatively, very recent works utilize deep reinforcement
+    learning (DRL) to restore high-quality images, where
+    a policy is learned to select appropriate actions or tools to progressively
+    refine corrupted images with a simple network model. However,
+    the model capability of DRL-based approaches is, to some extent,
+    limited due to its finite action space. Moreover, most of these
+    DRL methods are physics-free, while it is well-known that the prior
+    concerning the physical forward model is extremely crucial for solving
+    ill-posed inverse problems such as in CS-MRI. Motivated by
+    these challenges, we propose a novel DRL-based unrolling framework
+    by integrating model priors into the intrinsic iterative process
+    of DRL strategy for MRI reconstruction. Thus, the capability of the
+    DRL model is significantly enhanced by exploiting the merits of
+    the unrolling scheme with almost no additional computational cost.
+    Extensive experiments demonstrate that our proposed DRL-based
+    unrolling framework achieves superior MRI reconstruction performance
+    compared with the previous baselines.
+    </p>
+
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1gz5y2CQfWymm9wATjy31NkLWB3pCovJP" alt="Demo Image">]]></content><author><name>SLIM</name></author><summary type="html"><![CDATA[Abstract]]></summary></entry><entry><title type="html">Adversarial Robustness in Medical Image Reconstruction</title><link href="http://localhost:4000/2022/11/07/adversarial.html" rel="alternate" type="text/html" title="Adversarial Robustness in Medical Image Reconstruction" /><published>2022-11-07T22:45:13-05:00</published><updated>2022-11-07T22:45:13-05:00</updated><id>http://localhost:4000/2022/11/07/adversarial</id><content type="html" xml:base="http://localhost:4000/2022/11/07/adversarial.html"><![CDATA[<h3 class="section-heading">Abstract</h3>
+
+<p>Although deep learning (DL) has gained much popularity for accelerated magnetic resonance imaging (MRI), recent studies have shown that DL-based MRI reconstruction models could be over-sensitive to  tiny input perturbations (that are called `adversarial perturbations'), which cause unstable, low-quality reconstructed images. 
+    This raises the question of how to design robust DL methods for  MRI reconstruction. 
+    To address this problem, we propose  a novel image reconstruction framework, termed underline Smoothed  Unrolling (SMUG), which advances a deep unrolling-based MRI reconstruction model using a randomized smoothing (RS)-based robust learning operation. RS, which improves the tolerance of a model against input noises, has been widely used in the design of adversarial defense for image classification. Yet, we find that  the conventional design that applies RS to  the entire DL process is ineffective for  MRI reconstruction. We show that SMUG addresses the above issue by customizing the RS operation based on the unrolling  architecture  of the DL-based MRI reconstruction model. Compared to   the vanilla RS approach and several variants of SMUG,  we show that 
+    SMUG improves the robustness of MRI reconstruction with respect to a diverse set of  perturbation sources, including perturbations to input measurements, different measurement sampling rates, and different unrolling steps.
+    </p>
+
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=17BDKi3y66-MuulTJyQ55CFsyx_y5PBHI" alt="Demo Image">]]></content><author><name>SLIM</name></author><summary type="html"><![CDATA[Abstract]]></summary></entry><entry><title type="html">Deep Learning Inspired by or Combined with Transform Learning for Low-dose Reconstruction</title><link href="http://localhost:4000/2022/11/06/deep.html" rel="alternate" type="text/html" title="Deep Learning Inspired by or Combined with Transform Learning for Low-dose Reconstruction" /><published>2022-11-06T22:45:13-05:00</published><updated>2022-11-06T22:45:13-05:00</updated><id>http://localhost:4000/2022/11/06/deep</id><content type="html" xml:base="http://localhost:4000/2022/11/06/deep.html"><![CDATA[<h3 class="section-heading">Abstract</h3>
+
+<p>Traditional model-based image reconstruction
+    (MBIR) methods combine forward and noise models with simple
+    object priors. In this
+        work, we propose a hybrid supervised-unsupervised (SUPER) learning
+        framework for X-ray computed tomography (CT) image
+        reconstruction. The proposed learning formulation leverages
+        both sparsity or unsupervised learning-based priors and neural
+        network reconstructors to simulate a fixed-point iteration
+        process. Each proposed trained block consists of a deterministic
+        MBIR solver and a neural network. The information flows in
+        parallel through these two reconstructors and is then optimally
+        combined, and multiple such blocks are cascaded to form a
+        reconstruction pipeline. </p>
+
+        <img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1YB1XW_jTicSI2-iSdpD61rn9luhtHap1" alt="Demo Image">
+        <span class="caption text-muted">Fig. 1: Overall structure of the proposed Parallel SUPER framework.</span>
+
+        <p>We demonstrate the efficacy of this
+        learned hybrid model for low-dose CT image reconstruction
+        with limited training data, where we use the NIH AAPM Mayo
+        Clinic Low Dose CT Grand Challenge dataset for training and
+        testing. In our experiments, we study combinations of supervised
+        deep network reconstructors and sparse representations-based
+        (unsupervised) learned or analytical priors. Our results
+        demonstrate the promising performance of the proposed
+        framework compared to recent reconstruction methods.</p>
+
+<h3 class="Results">Results</h3>
+
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1opimB8zTz1R5uDGBgWfkQz-CTEKgPolN" alt="Demo Image">
+<span class="caption text-muted">Fig. 2: Reconstruction of slice 50 from patient L067 and reconstruction of slice 150 from patient L310 using various methods. The display window is [800, 1200] HU.</span>
+
+<h3 class="section-heading">References</h3>
+
+<p>Chen, Ling, Zhishen Huang, Yong Long, and Saiprasad Ravishankar. <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12304/123041S/Combining-deep-learning-and-adaptive-sparse-modeling-for-low-dose/10.1117/12.2647190.full" target ="blank"> "Combining deep learning and adaptive sparse modeling for low-dose CT reconstruction."</a> In 7th International Conference on Image Formation in X-Ray Computed Tomography, vol. 12304, pp. 390-395. SPIE, 2022.</p>
+<p>Ye, Siqi, Zhipeng Li, Michael T. McCann, Yong Long, and Saiprasad Ravishankar. <a href="https://ieeexplore.ieee.org/abstract/document/9476023?casa_token=SnMdhG9_PW8AAAAA:jTTmnwk2xOT7xTc7Uzd07_mjgoUb-pvQWQPpGWKNHZp0AVkO3Q5eM4G9cX8fG2YuCG_hfCNd3A" target ="blank">"Unified supervised-unsupervised (super) learning for x-ray ct image reconstruction."</a> IEEE Transactions on Medical Imaging 40, no. 11 (2021): 2986-3001.</p>]]></content><author><name>SLIM</name></author><summary type="html"><![CDATA[Abstract]]></summary></entry><entry><title type="html">Machine learning for Classifying Events in Nuclear Astrophysics</title><link href="http://localhost:4000/2022/11/05/machine.html" rel="alternate" type="text/html" title="Machine learning for Classifying Events in Nuclear Astrophysics" /><published>2022-11-05T23:45:13-04:00</published><updated>2022-11-05T23:45:13-04:00</updated><id>http://localhost:4000/2022/11/05/machine</id><content type="html" xml:base="http://localhost:4000/2022/11/05/machine.html"><![CDATA[<h3 class="section-heading">Abstract</h3>
+
+<p>Measuring astrophysically relevant nuclear reaction rates can provide crucial insight into astrophysical phenomena, such as inferring neutron star properties. To measure these reaction rates we use Time Projection Chambers (TPCs). TPCs are particle detectors that perform 3D track reconstructions of particle trajectories. Recently, machine learning algorithms for image classification have emerged as valuable tools for classifying particles from their TPC track reconstructions. This is typically achieved by feeding a 2D projection of the 3D track into a 2D convolutional neural network (ConvNet). However, situations can arise where distinguishing certain particle types requires the entire 3D topology of an event. This would ordinarily require a 3D ConvNet, which is very computationally expensive, and thus not feasible given the amount of data regularly produced from a TPC. We have devised an alternate method for particle identification in these instances. By exploiting the different data modalities captured by the TPC, one can condense all of the relevant data from a 3D track into a 2D image with distinct features for a 2D ConvNet. Additionally, researchers have found that using simulated data to fine-tune an existing 2D ConvNet can allow one to identify real TPC tracks. We have discovered that by applying the methods of robustification on such fine-tuned models classification results can be greatly improved. </p>
+
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1-EuaFgKGdqaah0JwxQvMFcD9Y44sjNKq" alt="Demo Image">
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1p8tD-kum1a1me_o11NF7pahsZBXa34cJ" alt="Demo Image">]]></content><author><name>SLIM</name></author><summary type="html"><![CDATA[Abstract]]></summary></entry></feed>

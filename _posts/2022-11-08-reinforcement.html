@@ -1,0 +1,36 @@
+---
+layout: post
+title: "Reinforcement Learning for Adaptive Imaging"
+subtitle: "By Gabriel Maliakal (Previously worked on by Leo Huang)"
+date: 2022-11-08 23:45:13 -0400
+background: '/img/posts/SIXTHBANNER.png'
+---
+<h3 class="section-heading">Abstract</h3>
+
+<p>Compressed sensing (CS) has been popular in magnetic resonance
+    imaging (MRI) and accelerates the measurement acquisition process
+    by undersampling data in k-space, while exploiting sparsity and incoherence
+    to achieve accurate reconstructions. Deep learning methods
+    have recently demonstrated superior performance for MRI reconstruction
+    from undersampled data. However, most of the methods
+    rely on complex models to achieve promising results via deterministic
+    optimization. Alternatively, very recent works utilize deep reinforcement
+    learning (DRL) to restore high-quality images, where
+    a policy is learned to select appropriate actions or tools to progressively
+    refine corrupted images with a simple network model. However,
+    the model capability of DRL-based approaches is, to some extent,
+    limited due to its finite action space. Moreover, most of these
+    DRL methods are physics-free, while it is well-known that the prior
+    concerning the physical forward model is extremely crucial for solving
+    ill-posed inverse problems such as in CS-MRI. Motivated by
+    these challenges, we propose a novel DRL-based unrolling framework
+    by integrating model priors into the intrinsic iterative process
+    of DRL strategy for MRI reconstruction. Thus, the capability of the
+    DRL model is significantly enhanced by exploiting the merits of
+    the unrolling scheme with almost no additional computational cost.
+    Extensive experiments demonstrate that our proposed DRL-based
+    unrolling framework achieves superior MRI reconstruction performance
+    compared with the previous baselines.
+    </p>
+
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1gz5y2CQfWymm9wATjy31NkLWB3pCovJP" alt="Demo Image">

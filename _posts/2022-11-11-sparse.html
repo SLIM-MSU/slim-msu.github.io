@@ -1,0 +1,32 @@
+---
+layout: post
+title: "Sparse-view CT Reconstruction"
+subtitle: "By Gabriel Maliakal"
+date: 2022-11-11 23:45:13 -0400
+background: '/img/posts/THIRDBANNER.png'
+---
+
+<h2><div align=center>Sparse-view Cone Beam CT Reconstruction using Data-consistent Supervised and Adversarial Learning from Scarce Training Data </div></h2>
+
+<h3 class="section-heading">Abstract</h3>
+
+<p>Reconstruction of CT images from a limited set of projections through an object is important in several applications ranging from medical imaging to industrial settings.
+As the number of available projections decreases, traditional reconstruction techniques such as the Feldkamp, Davis, and Kress (FDK) algorithm and model based iterative reconstruction methods perform poorly. </p>
+    
+<img class="img-fluid" src="https://lh3.googleusercontent.com/NzlI01TvHFdsurkpnH4Eu6NXv7zPpyEL7LdsTS_SD-dQ7NVxgQVBul7fh9HNJVrhUmtD5QqTNOM1wr-efr6cwSNPjgBKPfzdT2zdtRca4YXvI3VeKeB6v8TGPqLoxE9YMbAL7mOYJl0F1HEOa_47C6jfLGfpH-jZf-QRDO8fGfTPVgPMWgo2iUGxhi9axQ" alt="Demo Image">
+<span class="caption text-muted">Fig. 1: Flow diagram depicting the overall pipeline of our algorithm, where x<sub>FDK</sub> is the FDK reconstruction, x<sub>EP</sub> is an edge-preserving regularized reconstruction, x<sub>G</sub> is the generator’s output after slice aggregation, and x<sub>1</sub> is the output of the first stage.</span>
+    
+<p>This work focuses on image reconstruction in such settings, namely, when both the number of available CT projections and the training data is extremely
+limited. We adopt a sequential reconstruction approach over several stages using an adversarially trained shallow network for "destreaking" followed by a data-consistency update in each
+stage. We use image subvolumes to train our method and patch aggregation and a hybrid 3D-to-2D mapping network for the "destreaking" component. Comparisons
+to other methods over several test examples indicate that the proposed method has much potential when both the number of projections and available training data are highly limited.</p>    
+
+<h3 class="section-heading">Results</h3>
+<br>
+<img class="img-fluid" src="https://lh4.googleusercontent.com/0f8zOuR-E9XDq-qfDCfypLenVd1OnvMXrZC48w7a589X5EpPovoxsa5boRqgEy7_0B1vxVFANjPM06VLyqLt516jp-g85bXZZcW-dCea4E6CgQNOS7dgOUF4jF_tLA7NwMnXiqqikf8__26foCX1GqBAHpgRDMYkWe52_fR-Q3JdrtRzHTErkDaP9Orjjg" alt="Demo Image">
+<span class="caption text-muted">Fig. 2: Comparison of the quality of reconstruction of our proposed algorithm (h) for walnut 2 (8 views) in Table I to various reference methods. Each
+subfigure depicts slices through the center of the walnut volume in three different directions (or sagittal, coronal and transverse orientations). The normalized
+mean absolute errors have also been shown underneath each subfigure. The central slices corresponding to the ground truth training walnut volume have also been shown in (b).</span>
+
+<h3 class="section-heading">References</h3>
+<p>Lahiri, Anish, Gabriel Maliakal, Marc L. Klasky, Jeffrey A. Fessler, and Saiprasad Ravishankar. <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10008080" target="_blank">"Sparse-view cone beam CT reconstruction using data-consistent supervised and adversarial learning from scarce training data."</a> IEEE Transactions on Computational Imaging 9 (2023): 13-28. </p>
