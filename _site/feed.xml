@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-07T00:01:46-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SLIM</title><subtitle>Signals, Learning and Imaging Research Group</subtitle><author><name>SLIM</name></author><entry><title type="html">Learning Data Undersampling Patterns in MRI</title><link href="http://localhost:4000/2022/11/13/learning.html" rel="alternate" type="text/html" title="Learning Data Undersampling Patterns in MRI" /><published>2022-11-13T22:45:13-05:00</published><updated>2022-11-13T22:45:13-05:00</updated><id>http://localhost:4000/2022/11/13/learning</id><content type="html" xml:base="http://localhost:4000/2022/11/13/learning.html"><![CDATA[<h3 class="section-heading">Abstract</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-07T00:21:30-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SLIM</title><subtitle>Signals, Learning and Imaging Research Group</subtitle><author><name>SLIM</name></author><entry><title type="html">Learning Data Undersampling Patterns in MRI</title><link href="http://localhost:4000/2022/11/13/learning.html" rel="alternate" type="text/html" title="Learning Data Undersampling Patterns in MRI" /><published>2022-11-13T22:45:13-05:00</published><updated>2022-11-13T22:45:13-05:00</updated><id>http://localhost:4000/2022/11/13/learning</id><content type="html" xml:base="http://localhost:4000/2022/11/13/learning.html"><![CDATA[<h3 class="section-heading">Abstract</h3>
 
 <p>Magnetic resonance imaging (MRI) is essential for the detection and diagnosis of diseases. MRI scanners sequentially collect measurements in the frequency domain (or k-space), from which an image is reconstructed. A central challenge in MRI is its time-consuming sequential acquisition process as the scanner needs to densely sample the underlying k-space for accurate reconstruction. In order to improve patients’ comfort & safety and alleviate motion artifacts, reconstructing high-quality images from limited measurements is desirable. There are two core parts in the accelerated MRI pipeline: a sampling pattern deployed to collect the undersampled data in k-space and a corresponding reconstruction method (reconstructor) that also enables recovering any missing information. In this work, we use machine-learned models to predict the undersampling pattern and perform image reconstruction in a single pass and in an object-adaptive manner.</p>
 
@@ -75,33 +75,52 @@ mean absolute errors have also been shown underneath each subfigure. The central
 
 <img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1pMHNZm4JORWhKGZD4702LeOceMnwvAfg" alt="Demo Image">]]></content><author><name>SLIM</name></author><summary type="html"><![CDATA[Abstract]]></summary></entry><entry><title type="html">Reinforcement Learning for Adaptive Imaging</title><link href="http://localhost:4000/2022/11/08/reinforcement.html" rel="alternate" type="text/html" title="Reinforcement Learning for Adaptive Imaging" /><published>2022-11-08T22:45:13-05:00</published><updated>2022-11-08T22:45:13-05:00</updated><id>http://localhost:4000/2022/11/08/reinforcement</id><content type="html" xml:base="http://localhost:4000/2022/11/08/reinforcement.html"><![CDATA[<h3 class="section-heading">Abstract</h3>
 
-<p>Compressed sensing (CS) has been popular in magnetic resonance
-    imaging (MRI) and accelerates the measurement acquisition process
-    by undersampling data in k-space, while exploiting sparsity and incoherence
-    to achieve accurate reconstructions. Deep learning methods
-    have recently demonstrated superior performance for MRI reconstruction
-    from undersampled data. However, most of the methods
-    rely on complex models to achieve promising results via deterministic
-    optimization. Alternatively, very recent works utilize deep reinforcement
-    learning (DRL) to restore high-quality images, where
-    a policy is learned to select appropriate actions or tools to progressively
-    refine corrupted images with a simple network model. However,
-    the model capability of DRL-based approaches is, to some extent,
-    limited due to its finite action space. Moreover, most of these
-    DRL methods are physics-free, while it is well-known that the prior
-    concerning the physical forward model is extremely crucial for solving
-    ill-posed inverse problems such as in CS-MRI. Motivated by
-    these challenges, we propose a novel DRL-based unrolling framework
-    by integrating model priors into the intrinsic iterative process
-    of DRL strategy for MRI reconstruction. Thus, the capability of the
-    DRL model is significantly enhanced by exploiting the merits of
-    the unrolling scheme with almost no additional computational cost.
-    Extensive experiments demonstrate that our proposed DRL-based
-    unrolling framework achieves superior MRI reconstruction performance
-    compared with the previous baselines.
-    </p>
+<p>**Revolutionizing MRI with Compressed Sensing**</p>
 
-<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1gz5y2CQfWymm9wATjy31NkLWB3pCovJP" alt="Demo Image">]]></content><author><name>SLIM</name></author><summary type="html"><![CDATA[Abstract]]></summary></entry><entry><title type="html">Adversarial Robustness in Medical Image Reconstruction</title><link href="http://localhost:4000/2022/11/07/adversarial.html" rel="alternate" type="text/html" title="Adversarial Robustness in Medical Image Reconstruction" /><published>2022-11-07T22:45:13-05:00</published><updated>2022-11-07T22:45:13-05:00</updated><id>http://localhost:4000/2022/11/07/adversarial</id><content type="html" xml:base="http://localhost:4000/2022/11/07/adversarial.html"><![CDATA[<h3 class="section-heading">Abstract</h3>
+<br>
+
+    <p>**What is Compressed Sensing (CS)?**</p>
+    <p>- A game-changer in MRI.</p>
+    <p>- Accelerates measurements by collecting less data, but smartly.</p>
+    <p>- Utilizes the power of sparsity and incoherence for accurate image reconstruction.</p>
+
+    <br>
+    
+    <p>**Deep Learning to the Rescue**</p>
+    <p>- Recent advancements have leaned on deep learning for improved MRI reconstructions.</p>
+    <p>- Many methods use intricate models and deterministic optimization for promising outcomes.</p>
+    
+    <br>
+
+    <p>**Enter Deep Reinforcement Learning (DRL)**</p>
+    <p>- The latest trend: using DRL for high-quality image restoration.</p>
+    <p>- The approach? Train a policy to select the best tools and progressively refine images.</p>
+    <p>- A limitation? Their finite action space restricts DRL capabilities.</p>
+    <p>- Another concern? Many DRL methods don't incorporate essential physics principles.</p>
+
+    <br>
+    
+    <p>**Our Cutting-edge Solution**</p>
+    <p>- We've developed a novel DRL-based framework that combines best practices.</p>
+    <p>- How? By integrating model priors into DRL's iterative process.</p>
+    <p>- The result? A dramatically improved DRL model without added computational demands.</p>
+
+    <br>
+    
+    <p>**Proven Results**</p>
+    <p>- Our new DRL framework outperforms previous methods, delivering exceptional MRI reconstruction.</p>
+
+    <br>
+    
+    <p>**Why This Matters**</p>
+    <p>- Faster, accurate, and efficient MRI scans can revolutionize medical diagnostics.</p>
+    <p>- Embracing deep learning can lead to groundbreaking advancements in healthcare.</p>
+
+<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1gz5y2CQfWymm9wATjy31NkLWB3pCovJP" alt="Demo Image">
+
+<h3 class="section-heading">References</h3>
+
+<p>Wang, C., Zhang, R., Maliakal, G., Ravishankar, S., & Wen, B. (2023, April). Deep Reinforcement Learning Based Unrolling Network for MRI Reconstruction. In 2023 IEEE 20th International Symposium on Biomedical Imaging (ISBI) (pp. 1-5). IEEE.</p>]]></content><author><name>SLIM</name></author><summary type="html"><![CDATA[Abstract]]></summary></entry><entry><title type="html">Adversarial Robustness in Medical Image Reconstruction</title><link href="http://localhost:4000/2022/11/07/adversarial.html" rel="alternate" type="text/html" title="Adversarial Robustness in Medical Image Reconstruction" /><published>2022-11-07T22:45:13-05:00</published><updated>2022-11-07T22:45:13-05:00</updated><id>http://localhost:4000/2022/11/07/adversarial</id><content type="html" xml:base="http://localhost:4000/2022/11/07/adversarial.html"><![CDATA[<h3 class="section-heading">Abstract</h3>
 
 <p>Although deep learning (DL) has gained much popularity for accelerated magnetic resonance imaging (MRI), recent studies have shown that DL-based MRI reconstruction models could be over-sensitive to  tiny input perturbations (that are called `adversarial perturbations'), which cause unstable, low-quality reconstructed images. 
     This raises the question of how to design robust DL methods for  MRI reconstruction. 
