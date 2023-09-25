@@ -43,10 +43,23 @@ background: '/img/posts/FOURTHBANNER.png'
     reconstructions compared to models trained globally on
     larger datasets.</p>
 
-<img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1ovQYT05BxQl-nPLXmBJmgjg9uBjHd3jJ" alt="Demo Image">
+<div align=center><img class="img-fluid" src="http://drive.google.com/uc?export=view&id=1sNAJGTepBNN6waDifAXWaNECK15uTKFH" alt="Demo Image"></div>
 
-<span class="caption text-muted">Comparison of MoDL with UNet denoiser trained globally vs. using the proposed LONDN-MRI scheme (1 iteration). Reconstruction metrics are shown across training set sizes at 4x and 8x undersampling.</span>
+<span class="caption text-muted"> Comparison of image reconstructions at 8x undersampling using MoDL architecture with UNet denoiser with 1000
+    training images: (a) ground truth, (b) initial image input to the
+    networks (PSNR = 16.43 dB), (c) global reconstruction (PSNR
+    = 29.26 dB), (d) LONDN-MRI (1 iteration) reconstruction
+    (PSNR = 29.50 dB), (e) oracle LONDN-MRI reconstruction
+    (PSNR = 29.72 dB), where the nearest neighbors in the
+    training set are found using known ground truth test image,
+    and (f) LONDN-MRI (2 iterations) reconstruction (PSNR =
+    29.68 dB). The inset panel on the top left in each image
+    corresponds to a section of interest in the image (shown by
+    the red bounding box), while the inset panel on the top right
+    corresponds to the error map with respect to the ground truth.</span>
 
 <h3 class="section-heading">References</h3>
 
-<p>S. Liang, A. Sreevatsa, A. Lahiri and S. Ravishankar, "<a href="https://arxiv.org/abs/2206.00775" target ="blank">LONDN-MRI: Adaptive Local Neighborhood-Based Networks for MR Image Reconstruction from Undersampled Data</a>," 2022 IEEE 19th International Symposium on Biomedical Imaging (ISBI), Kolkata, India, 2022.</p>
+<p>S. Liang, A. Sreevatsa, A. Lahiri and S. Ravishankar, "<a href="https://ieeexplore.ieee.org/document/9761587" target ="blank">LONDN-MRI: Adaptive Local Neighborhood-Based Networks for MR Image Reconstruction from Undersampled Data</a>," 2022 IEEE 19th International Symposium on Biomedical Imaging (ISBI), Kolkata, India, 2022.</p>
+
+<p>S. Liang, A. Lahiri, & S. Ravishankar. (2022). "<a href="https://arxiv.org/abs/2206.00775" target ="blank">Adaptive Local Neighborhood-based Neural Networks for MR Image Reconstruction from Undersampled Data</a>". arXiv preprint arXiv:2206.00775.</p>
