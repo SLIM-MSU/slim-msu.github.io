@@ -95,16 +95,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-.button {
-  background-color: rgb(226, 95, 95);
-  border: none;
-  color: white;
-  padding: 7px 300px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-}
 
 .list {
 	list-style: none;
@@ -122,27 +112,33 @@
 
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
+$(document).ready(function () {
+  var list = $(".list li");
+  var numToShow = 6; // Adjust the number of items to show initially
+  var numInList = list.length;
 
-var list = $(".list li");
-var numToShow = 21;
-var button = $("#next");
-var numInList = list.length;
-list.hide();
-if (numInList > numToShow) {
-  button.show();
-}
-list.slice(0, numToShow).show();
+  // Hide the list items that are beyond the initial display count
+  list.slice(numToShow).hide();
 
-button.click(function(){
-    var showing = list.filter(':visible').length;
-    list.slice(showing - 1, showing + numToShow).fadeIn();
-    var nowShowing = list.filter(':visible').length;
-    if (nowShowing >= numInList) {
-      button.hide();
+  //Scroll event handler
+  $(window).on('scroll', function () {
+    var scrollTop = $(this).scrollTop();
+    var windowHeight = $(this).height();
+    var documentHeight = $(document).height();
+
+    // Check if the user has scrolled to the bottom or near the bottom
+    if (scrollTop + windowHeight >= documentHeight - 100) {
+      var showing = list.filter(':visible').length;
+
+      // Show the next set of items
+      list.slice(showing, showing + numToShow).fadeIn();
+
+      // Check if all items are displayed
+      var nowShowing = list.filter(':visible').length;
+      if (nowShowing >= numInList) {;
+      }
     }
-});
-
+  });
 });
 
 </script>
@@ -239,7 +235,6 @@ button.click(function(){
   <li><b>05/16/20: </b>Anish Lahiri (EECS, UM) and Berk Iskender (ECE, UIUC) joined as summer interns. </li>
 
 </ul>
-<button class="button" id="next">Read More</button>
 </div>
 
 </body>
