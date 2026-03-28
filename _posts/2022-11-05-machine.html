@@ -1,18 +1,26 @@
 ---
 layout: post
-title: "Machine learning for Classifying Events in Nuclear Astrophysics"
+title: "Representation Learning for Time Projection Chamber Data"
 subtitle: "By Tyler Wheeler"
 date: 2022-11-05 23:45:13 -0400
 background: '/img/posts/NINTHBANNER.png'
 ---
 
-<h3 class="section-heading">Abstract</h3>
+<p>Time Projection Chambers (TPCs) produce high-dimensional, sparsely populated datasets that encode detailed three-dimensional particle tracks. This project develops machine learning methods that learn structured representations directly from raw detector signals, enabling scalable analysis and discovery in nuclear physics experiments.</p>
 
-<p>Measuring astrophysically relevant nuclear reaction rates can provide crucial insight into astrophysical phenomena, such as inferring neutron star properties. To measure these reaction rates we use Time Projection Chambers (TPCs). TPCs are particle detectors that perform 3D track reconstructions of particle trajectories. Recently, machine learning algorithms for image classification have emerged as valuable tools for classifying particles from their TPC track reconstructions. This is typically achieved by feeding a 2D projection of the 3D track into a 2D convolutional neural network (ConvNet). However, situations can arise where distinguishing certain particle types requires the entire 3D topology of an event. This would ordinarily require a 3D ConvNet, which is very computationally expensive, and thus not feasible given the amount of data regularly produced from a TPC. We have devised an alternate method for particle identification in these instances. By exploiting the different data modalities captured by the TPC, one can condense all of the relevant data from a 3D track into a 2D image with distinct features for a 2D ConvNet. Additionally, researchers have found that using simulated data to fine-tune an existing 2D ConvNet can allow one to identify real TPC tracks. We have discovered that by applying the methods of robustification on such fine-tuned models classification results can be greatly improved. </p>
+<p>We focus on sparse convolutional neural networks that operate directly on TPC data represented as sparse tensors. Using Minkowski Engine architectures, we investigate how latent embeddings learned from detector signals capture physically meaningful event structure and transfer across different TPC systems, demonstrating a pathway toward foundation models for TPCs.</p>
 
-<img class="img-fluid" src="https://lh3.googleusercontent.com/pw/AP1GczOHK13_Q6crQkk_Fw_l935MKtNIcP_IDcR8tQ8fq9Sj6zwlVrbwgZVofDOVkW5Ugy1wW2WJF1RjtBy2jkHmumnG2-ldlyVDkujJzsIyjSZ3fpf709xjhVYBAirS2_30yCMyQ_0OEconVhmohK4QIPlW=w676-h901-s-no-gm?authuser=0" alt="Demo Image">
-<img class="img-fluid" src="https://lh3.googleusercontent.com/pw/AP1GczMDtTcfwpDuRH8tChAMHGBU7ABPIRxDxdsCbO672c0PYOtsHKCN8N4XIWOk8QbXkXM1QZXBt6KW-SGOA-E2OC8ljU3SbjsrNYIJGS71RN1RrUh_y1vLj8liJkxkpHpRG1XI7q1wyh4ir2fM1b3fdAeX=w801-h822-s-no-gm?authuser=0" alt="Demo Image">
+<p>This effort builds on earlier work developing a multi-modal deep learning framework for the GADGET II TPC at the Facility for Rare Isotope Beams (FRIB), where convolutional neural network object detection was combined with time-projection signal analysis to identify rare proton–alpha coincidence events relevant to nuclear astrophysics measurements.</p>
+
+<img class="img-fluid" src="https://lh3.googleusercontent.com/pw/AP1GczOHK13_Q6crQkk_Fw_l935MKtNIcP_IDcR8tQ8fq9Sj6zwlVrbwgZVofDOVkW5Ugy1wW2WJF1RjtBy2jkHmumnG2-ldlyVDkujJzsIyjSQ3fpf709xjhVYBAirS2_30yCMyQ_0OEconVhmohK4QIPlW=w676-h901-s-no-gm?authuser=0" alt="Tyler Wheeler by the GADGET II TPC detector at FRIB">
+<span class="caption text-muted">Tyler Wheeler by the GADGET II TPC detector at the Facility for Rare Isotope Beams (FRIB).</span>
+
+<!-- IMAGES TO ADD: Two figures of 3D particle tracks from the Sparse Methods for Vector Embeddings paper (arXiv:2511.11221). Please provide the image URLs to complete this section. -->
 
 <h3 class="section-heading">References</h3>
 
-<p>Wheeler, T., Adams, A., Allmond, J., Pol, H. A., Argo, E., Ayyad, Y., ... & Wrede, C. (2022). <a href="https://www.epj-conferences.org/articles/epjconf/abs/2022/04/epjconf_nic16th2022_11046/epjconf_nic16th2022_11046.html" target ="blank">Measuring the 15O (α, γ) 19Ne reaction in Type I X-ray bursts using the GADGET II TPC: Hardware</a>. In EPJ Web of Conferences (Vol. 260, p. 11046). EDP Sciences.</p>
+<p>Tyler Wheeler, M. Kuchera, R. Ramanujan, R. Krupp, C. Wrede, S. Ravishankar, D. Bazin, C. Cross, H. Heung, A. Jones, P. Singh, B. Votaw. "Cross-detector Representation Learning with Applications to TPC Foundation Models." In preparation (2026).</p>
+
+<p>Tyler Wheeler, M. Kuchera, R. Ramanujan, R. Krupp, C. Wrede, S. Ravishankar, C. Cross, H. Heung, A. Jones, B. Votaw. <a href="https://arxiv.org/abs/2511.11221" target="blank">"Sparse Methods for Vector Embeddings of TPC Data."</a> NeurIPS Machine Learning and the Physical Sciences Workshop 2025. arXiv:2511.11221 (2025).</p>
+
+<p>Tyler Wheeler, S. Ravishankar, C. Wrede, A. Andalib, A. Anthony, Y. Ayyad, B. Jain, A. Jaros, R. Mahajan, L. Schaedig, A. Adams, S. Ahn, J.M. Allmond, D. Bardayan, D. Bazin, K. Bosmpotinis, T. Budner, S.R. Carmichael, S.M. Cha, A. Chen, K.A. Chipps, J.M. Christie, I. Cox, J. Dopfer, M. Friedman, J. Garcia-Duarte, E. Good, T.J. Gray, A. Green, R. Grzywacz, K. Hahn, R. Jain, E. Jensen, T. King, S. Liddick, B. Longfellow, R. Lubna, C. Marshall, Y. Mishnayot, A.J. Mitchell, F. Montes, T.H. Ogunbeku, J. Owens-Fryar, S.D. Pain, J. Pereira, E. Pollacco, A.M. Rogers, M.Z. Serikow, K. Setoodehnia, L.J. Sun, J. Surbrook, A. Tsantiri, L.E. Weghorn. <a href="https://doi.org/10.1016/j.nima.2025.170659" target="blank">"Object Detection with Deep Learning for Rare Event Search in the GADGET II TPC."</a> Nucl. Instrum. Methods Phys. Res. A 1080, 170659 (2025).</p>
