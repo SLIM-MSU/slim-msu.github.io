@@ -8,6 +8,30 @@ background: '/img/posts/FIRSTBANNER.png'
 
 <h3 class="section-heading">Abstract</h3>
 
+<p>
+Cardiac cine MRI is limited by long acquisition times, increasing discomfort and motion sensitivity. We accelerate Cartesian dynamic cardiac MRI by learning scan-/slice-adaptive undersampling masks tailored to each scan. Using fully sampled training time-series data, we optimize undersampling patterns offline and store them in a dictionary. At inference, we use a nearest-neighbor search in low-frequency k-space to select an optimized mask, which is then applied across the entire dynamic series. Across public and in-house cardiac datasets, dSUNO improves reconstruction quality over common baselines, achieving ~2–3 dB PSNR gains, lower NMSE, higher SSIM, and better radiologist ratings, supporting improved diagnostic quality at higher accelerations.
+</p>
+
+<h3 class="section-heading">Code</h3>
+
+<p>
+<a href="https://github.com/sidgautam95/rbicd-dynamic-mri-sampling" target="_blank">
+rbicd-dynamic-mri-sampling
+</a>
+</p>
+
+<h3 class="section-heading">References</h3>
+
+<p>
+S. Gautam, A. Li, P. P. Agarwal, A. K. Attili, J. A. Fessler, N. Seiberlich, and S. Ravishankar,
+"<a href="https://doi.org/10.48550/arXiv.2602.13984" target="_blank">
+Scan-Adaptive Dynamic MRI Undersampling Using a Dictionary of Efficiently Learned Patterns
+</a>,"
+arXiv preprint arXiv:2602.13984, 2026.
+</p>
+
+<h3 class="section-heading">Abstract</h3>
+
 <p>Magnetic resonance imaging (MRI) is essential for the detection and diagnosis of diseases. MRI scanners sequentially collect measurements in the frequency domain (or k-space), from which an image is reconstructed. A central challenge in MRI is its time-consuming sequential acquisition process as the scanner needs to densely sample the underlying k-space for accurate reconstruction. In order to improve patients’ comfort & safety and alleviate motion artifacts, reconstructing high-quality images from limited measurements is desirable. There are two core parts in the accelerated MRI pipeline: a sampling pattern deployed to collect the undersampled data in k-space and a corresponding reconstruction method (reconstructor) that also enables recovering any missing information. In this work, we use machine-learned models to predict the undersampling pattern and perform image reconstruction in a single pass and in an object-adaptive manner.</p>
 
 <img class="img-fluid" src="https://lh3.googleusercontent.com/pw/AP1GczMmEiBpeyTbme9eU5peowu_8Da23zdmpz0JsjPq0f-2FPP0kg15cfjALO5xNt2pzRjUXEzXlrI92epsPv_8mEQJ_fveWXaEs9Z_ojRDv1I6tPEt4-R7HOQH23Sj5MkE8M7HWmF1nvyWPlnTIYatOpcP=w874-h461-s-no-gm?authuser=0" alt="Demo Image">
