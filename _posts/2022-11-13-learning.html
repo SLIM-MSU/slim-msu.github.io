@@ -12,6 +12,10 @@ background: '/img/posts/FIRSTBANNER.png'
 Cardiac cine MRI is limited by long acquisition times, increasing discomfort and motion sensitivity. We accelerate Cartesian dynamic cardiac MRI by learning scan-/slice-adaptive undersampling masks tailored to each scan. Using fully sampled training time-series data, we optimize undersampling patterns offline and store them in a dictionary. At inference, we use a nearest-neighbor search in low-frequency k-space to select an optimized mask, which is then applied across the entire dynamic series. Across public and in-house cardiac datasets, dSUNO improves reconstruction quality over common baselines, achieving ~2–3 dB PSNR gains, lower NMSE, higher SSIM, and better radiologist ratings, supporting improved diagnostic quality at higher accelerations.
 </p>
 
+<p align="center">
+    <img class="img-fluid" src="/img/SUNO_dSUNO/dSUNO Pipeline.png" alt="dSUNO Pipeline">
+</p>
+
 <h3 class="section-heading">Code</h3>
 
 <p>
@@ -34,6 +38,10 @@ arXiv preprint arXiv:2602.13984, 2026.
 
 <p>
 Accelerated MRI often relies on k-space undersampling with advanced reconstruction, and recent work has learned population-adaptive sampling patterns from groups of scans. We go a step further by personalizing sampling per scan. We propose a framework that jointly learns scan-adaptive Cartesian undersampling patterns and a corresponding reconstruction model from training data. The method alternates between learning the reconstructor and offline ICD-based optimization of scan-specific k-space masks. At test time, a nearest-neighbor search using initially acquired low-frequency k-space selects an optimized mask from a learned dictionary. On fastMRI multi-coil knee and brain data, SUNO improves reconstruction quality at 4x and 8x.
+</p>
+
+<p align="center">
+    <img class="img-fluid" src="/img/SUNO_dSUNO/graphical_abstract.png" alt="SUNO Pipeline">
 </p>
 
 <h3 class="section-heading">Code</h3>
