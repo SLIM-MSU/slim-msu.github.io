@@ -2,12 +2,12 @@
 layout: post
 title: "Learning Data Undersampling Patterns in MRI"
 subtitle: "By Siddhant Gautam, Angqi Li, and Evan Bell (Previously worked on by Leo Huang)"
-date: 2022-11-13 23:45:13 -0400
+date: 2026-06-05 23:45:13 -0400
 background: '/img/posts/FIRSTBANNER.png'
 ---
 
-<h3 class="section-heading">Abstract</h3>
-<h4>dSUNO for Cardiac MRI</h4> 
+<h3 class="section-heading">dSUNO for Cardiac MRI</h3>
+<h4>Abstract</h4> 
 <p>
 Cardiac cine MRI is limited by long acquisition times, increasing discomfort and motion sensitivity. We accelerate Cartesian dynamic cardiac MRI by learning scan-/slice-adaptive undersampling masks tailored to each scan. Using fully sampled training time-series data, we optimize undersampling patterns offline and store them in a dictionary. At inference, we use a nearest-neighbor search in low-frequency k-space to select an optimized mask, which is then applied across the entire dynamic series. Across public and in-house cardiac datasets, dSUNO improves reconstruction quality over common baselines, achieving ~2–3 dB PSNR gains, lower NMSE, higher SSIM, and better radiologist ratings, supporting improved diagnostic quality at higher accelerations.
 </p>
@@ -17,18 +17,8 @@ Cardiac cine MRI is limited by long acquisition times, increasing discomfort and
 </p>
 
 <h3 class="section-heading">
-  <a href="https://github.com/sidgautam95/rbicd-dynamic-mri-sampling" target="_blank" style="color: inherit; text-decoration: underline;">Code</a>
+  Code <a href="https://github.com/sidgautam95/rbicd-dynamic-mri-sampling" target="_blank" style="text-decoration: underline;">here</a>
 </h3>
-
-<h3 class="section-heading">References</h3>
-
-<p>
-S. Gautam, A. Li, P. P. Agarwal, A. K. Attili, J. A. Fessler, N. Seiberlich, and S. Ravishankar,
-"<a href="https://doi.org/10.48550/arXiv.2602.13984" target="_blank">
-Scan-Adaptive Dynamic MRI Undersampling Using a Dictionary of Efficiently Learned Patterns
-</a>,"
-arXiv preprint arXiv:2602.13984, 2026.
-</p>
 
 <h3 class="section-heading">References</h3>
 
@@ -52,8 +42,9 @@ Accelerated MRI often relies on k-space undersampling with advanced reconstructi
 </p>
 
 <h3 class="section-heading">
-  <a href="https://github.com/sidgautam95/adaptive-sampling-mri-suno" target="_blank" style="color: inherit; text-decoration: underline;">Code</a>
-</h3>
+Code <a href="https://github.com/sidgautam95/adaptive-sampling-mri-suno" target="_blank" style="text-decoration: underline;">here</a>
+</h3> 
+
 
 <h3 class="section-heading">References</h3>
 
@@ -83,8 +74,9 @@ ICASSP 2024 – IEEE International Conference on Acoustics, Speech and Signal Pr
 <img class="img-fluid" src="https://lh3.googleusercontent.com/pw/AP1GczO0Og4ZGrP1FH54gju_qj-Wfis42U61qG-8wvYdvcPapAX9DDn2c9yELhgH9qqfkqztfsad8UVG6esX7KtewVfrCohCHGXltiDeXIoV5_rroa-T-jiIot9MzOQsTTwaFqToQuVsQbNDtqD8-zH4r4mG=w991-h533-s-no-gm?authuser=0" alt="Demo Image">
 
 <h3 class="section-heading">
-  <a href="https://github.com/zhishenhuang/mri" target="_blank" style="color: inherit; text-decoration: underline;">Code</a>
-</h3>
+Code <a href="https://github.com/zhishenhuang/mri" target="_blank" style="text-decoration: underline;">here</a>
+</h3> 
+
 
 <h3 class="section-heading">References</h3>
 
