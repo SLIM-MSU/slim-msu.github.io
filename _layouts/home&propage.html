@@ -2,12 +2,22 @@
 layout: default
 ---
 
+<style>
+.home-masthead {
+    min-height: 850px !important;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+</style>
+
+
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}');background-size: contain;background-position: center;background-repeat: no-repeat">
-  {% else %}
-  <header class="masthead">
-    {% endif %}
+<header class="masthead home-masthead"
+  style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}');">
+{% else %}
+<header class="masthead home-masthead">
+{% endif %}
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
