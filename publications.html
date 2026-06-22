@@ -232,38 +232,7 @@ background: '/img/publications_banner.jpg'
   
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function () {
-  var list = $(".list li");
-  var numToShow = 6; // Adjust the number of items to show initially
-  var numInList = list.length;
 
-  // Hide the list items that are beyond the initial display count
-  list.slice(numToShow).hide();
-
-  //Scroll event handler
-  $(window).on('scroll', function () {
-    var scrollTop = $(this).scrollTop();
-    var windowHeight = $(this).height();
-    var documentHeight = $(document).height();
-
-    // Check if the user has scrolled to the bottom or near the bottom
-    if (scrollTop + windowHeight >= documentHeight - 100) {
-      var showing = list.filter(':visible').length;
-
-      // Show the next set of items
-      list.slice(showing, showing + numToShow).fadeIn();
-
-      // Check if all items are displayed
-      var nowShowing = list.filter(':visible').length;
-      if (nowShowing >= numInList) {;
-      }
-    }
-  });
-});
-
-</script>
 
 </body>
 </html>
