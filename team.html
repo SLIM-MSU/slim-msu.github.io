@@ -23,7 +23,7 @@ background: '/img/TEAMBANNER.png'
     display: flex;
     flex-wrap: wrap;
     margin: 0 -8px;
-    align-items: stretch;
+    align-items: flex-start;
   }
   
   .column {
@@ -31,6 +31,7 @@ background: '/img/TEAMBANNER.png'
       padding: 0 8px;
       margin-bottom: 16px;
       display: flex;
+      min-width: 0;
     }
     
     @media screen and (max-width: 650px) {
@@ -44,7 +45,43 @@ background: '/img/TEAMBANNER.png'
     height: 100%;
     display: flex;
     flex-direction: column;
-    
+    width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .card h2, .card h3 {
+    overflow-wrap: normal;
+  }
+
+  /* The theme gives every paragraph 30px margins; tighten them inside cards */
+  .card p {
+    margin: 6px 0;
+  }
+
+  .card p:has(.more) {
+    margin: 0 0 6px;
+  }
+
+  /* Old invisible spacers used to even out card heights; no longer needed */
+  .card .container > span[style*="opacity:0"] {
+    display: none;
+  }
+
+  .card .container > :last-child {
+    margin-bottom: 16px;
+  }
+
+  /* Push the Bio button, links and Contact button to the bottom of each card */
+  .card .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card .container > div:has(.myBtn),
+  .card .container > div:has(.title) + div {
+    margin-top: auto;
   }
   
   .container {
@@ -82,9 +119,10 @@ background: '/img/TEAMBANNER.png'
     background-color: rgb(225, 48, 48);
   }
   
-  img {
+  .card img {
     width: 100%;
-    height: 310%;
+    height: auto;
+    aspect-ratio: 3 / 4;
     object-fit: cover;
   }
   
@@ -1198,3 +1236,44 @@ background: '/img/TEAMBANNER.png'
     </div>
   </div>
 </div>
+
+<script>
+  // Find the font size that fits the longest name, then use it for every name
+  function fitNames() {
+    const names = document.querySelectorAll('.card h2, .card h3');
+    let smallest = Infinity;
+    names.forEach(function (name) {
+      name.style.fontSize = '';
+      let size = parseFloat(getComputedStyle(name).fontSize);
+      while (name.scrollWidth > name.clientWidth && size > 12) {
+        size -= 1;
+        name.style.fontSize = size + 'px';
+      }
+      smallest = Math.min(smallest, size);
+    });
+    names.forEach(function (name) {
+      name.style.fontSize = smallest + 'px';
+    });
+    sizeCards();
+  }
+
+  // Make every card as tall as the tallest card with its bio closed
+  function sizeCards() {
+    const cards = document.querySelectorAll('.card');
+    let tallest = 0;
+    cards.forEach(function (card) {
+      card.style.minHeight = '';
+    });
+    cards.forEach(function (card) {
+      const bio = card.querySelector('.more');
+      if (!bio || bio.style.display === 'none') {
+        tallest = Math.max(tallest, card.offsetHeight);
+      }
+    });
+    cards.forEach(function (card) {
+      card.style.minHeight = tallest + 'px';
+    });
+  }
+  window.addEventListener('load', fitNames);
+  window.addEventListener('resize', fitNames);
+</script>
